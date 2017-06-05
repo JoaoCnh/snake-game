@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JoaoCnh - Arcade</title>
+	<title>JoaoCnh - Arkade</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/volcan/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">		
-	<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">		
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
 	<link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="assets/volcan/css/magnific-popup.css">
@@ -24,14 +24,14 @@
 							<div class="inner">
 								<!-- Logo -->
 								<a href="#menu" class="nav-bars">
-									<img src="assets/volcan/images/nav_icon.svg" class="img-responsive" 
+									<img src="assets/volcan/images/nav_icon.svg" class="img-responsive"
 										alt="Collapsable Navbar">
 								</a>
 								<a href="index.html" class="logo">
 									<span class="symbol">
 										<img src="assets/volcan/images/logo.png" alt="Title" />
 									</span>
-									<span class="title">JoaoCnh - Arcade</span>
+									<span class="title">JoaoCnh - Arkade</span>
 								</a>
 							</div>
 						</header>
@@ -39,7 +39,7 @@
 						<nav id="menu">
 							<h2>Menu</h2>
 							<ul>
-								<li><a href="index.html#snake">Snake</a></li>
+								<li><a href="index.html#snake">Arkade</a></li>
 								<li><a href="http://JoaoCnh.github.io">More about - João Cunha</a></li>
 							</ul>
 						</nav>
@@ -59,27 +59,74 @@
 						<span class="orange">Javascript.</span>
 					</p>
 					<p>
-						<a href="https://github.com/JoaoCnh" target="_blank" 
+						<a href="https://github.com/JoaoCnh" target="_blank"
 							class="btn btn-social btn-github">
 							<span class="fa fa-github"></span>
 							JoaoCnh
 						</a>
-						<a href="https://www.facebook.com/joao.m.cunha.56" target="_blank" 
+						<a href="https://www.facebook.com/joao.m.cunha.56" target="_blank"
 							class="btn btn-social btn-facebook">
 							<span class="fa fa-facebook"></span>
 							João Cunha
 						</a>
-						<a href="https://twitter.com/lokuzt" target="_blank" 
+						<a href="https://twitter.com/lokuzt" target="_blank"
 							class="btn btn-social btn-twitter">
 							<span class="fa fa-twitter"></span>
 							lokuzt
 						</a>
-						<a href="https://www.instagram.com/joaomiguelcunha45" target="_blank" 
+						<a href="https://www.instagram.com/joaomiguelcunha45" target="_blank"
 							class="btn btn-social btn-instagram">
 							<span class="fa fa-instagram"></span>
 							joaomiguelcunha45
 						</a>
 					</p>
+				</div>
+			</div>
+			<div class="tiles">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="a">
+							<a href="#snake-popup" id="open-snake">
+								<img src="assets/images/snake.ico" class="img-responsive img-center" alt="snake" />
+								<div class="img-hover snake">
+									<div class="c-table">
+										<div class="ct-cell">
+											<h3 class="img-title">Snake</h3>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div id="snake-popup" class="white-popup mfp-hide">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="pop-up-color">
+										<div class="col-md-5">
+											<canvas id="snake-canvas" width="400" height="400"></canvas>
+										</div>
+										<div class="col-md-7">
+											<div>
+												<h2 class="popup-head">Snake</h2>
+											</div>
+											<div>
+												<p class="popup-paragraph">
+													Points:
+													<span id="snake-points" data-points="0">0</span>
+												</p>
+												<p class="popup-paragraph">
+													Press any arrow key to start
+												</p>
+												<p class="popup-paragraph">
+													P (Pause) / G (Unpause)
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button title="close" type="button" class="mfp-close">x</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -92,6 +139,7 @@
 	<script src="assets/volcan/js/script.js"></script>
 
 	<!-- Game scripts -->
-	<script src="lib/snake.js"></script>
+	<script src="lib/games/snake.js"></script>
+	<script src="lib/arkade.js"></script>
 </body>
 </html>

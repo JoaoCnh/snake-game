@@ -1,2 +1,2 @@
-# snake-game
-A plain Javascript snake game
+# Arkade
+A plain Javascript misc of games
