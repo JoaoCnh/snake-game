@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "bootstrap-social": "^5.1.1"
+    "bootstrap-social": "^5.1.1",
+    "sweetalert": "^1.1.3"
   }
 }
