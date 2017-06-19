@@ -8,10 +8,11 @@ const SpritePlugin = require('svg-sprite-loader/plugin');
 const autoprefixer = require('autoprefixer');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
+const version = require('./package.json').version;
 const isProduction = nodeEnv === 'production';
 
 const jsPath = path.join(__dirname, './src/js');
-const buildPath = path.join(__dirname, './build');
+const buildPath = path.join(__dirname, './docs');
 const imgPath = path.join(__dirname, './src/assets/img');
 const iconPath = path.join(__dirname, './src/assets/icons');
 const srcPath = path.join(__dirname, './src');
@@ -30,6 +31,7 @@ const plugins = [
 	new webpack.DefinePlugin({
 		'process.env': {
 			NODE_ENV: JSON.stringify(nodeEnv),
+			VERSION: JSON.stringify(version),
 		},
 	}),
 	new webpack.NamedModulesPlugin(),

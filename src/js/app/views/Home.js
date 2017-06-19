@@ -5,6 +5,9 @@ export default class Home extends Component {
 		console.log("== RENDER HOME ==");
 		return (
 			<div className="home">
+				<div className="jumbotron">
+					<h1>Arkade</h1>
+				</div>
 			</div>
 		);
 	}
