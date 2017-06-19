@@ -29,19 +29,19 @@ export default class Menu extends Component {
 	render () {
 		return (
 			<nav className={this._menuCss()}>
-				<Link to="/about" className="disc l1">
+				<Link to="/arkade/about" className="disc l1">
 					<div>
 						<FaGithub />
 						About
 					</div>
 				</Link>
-				<Link to="/games" className="disc l2">
+				<Link to="/arkade/games" className="disc l2">
 					<div>
 						<FaGamepad />
 						Games
 					</div>
 				</Link>
-				<Link to="/" className="disc l3">
+				<Link to="/arkade" className="disc l3">
 					<div>
 						<FaHome />
 						Home

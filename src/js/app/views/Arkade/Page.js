@@ -10,9 +10,9 @@ export default class Page extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/games" component={Games} />
-        <Route path="/about" component={About} />
+        <Route exact path="/arkade" component={Home} />
+        <Route path="/arkade/games" component={Games} />
+        <Route path="/arkade/about" component={About} />
         <Route path="*" component={NotFound} />
       </Switch>
     );

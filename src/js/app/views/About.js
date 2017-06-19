@@ -19,12 +19,10 @@ export default class About extends Component {
 	}
 
 	componentDidMount() {
-		console.log("== ABOUT DID MOUNT ==");
 		this.props.dispatch(getReadme());
 	}
 
 	render() {
-		console.log("== RENDER ABOUT ==");
 		const {
 			loadingReadme,
 			readme,
