@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Page from 'views/Arkade/Page';
+import Menu from 'app/components/shared/Menu';
+import Page from 'app/views/Arkade/Page';
 
 const publicPath = '/';
 
@@ -10,7 +11,7 @@ export const routeCodes = {
 	HOME: publicPath,
 };
 
-export default class Tracker extends Component {
+export default class Arkade extends Component {
 	static propTypes = {
 		children: PropTypes.object,
 	}
@@ -19,6 +20,7 @@ export default class Tracker extends Component {
 		return (
 			<BrowserRouter>
 				<div className="arkade">
+					<Menu />
           <div className="container-fluid">
 					  <Page />
           </div>

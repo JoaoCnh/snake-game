@@ -1,0 +1,120 @@
+$menu-size: 50px;
+$menu-items: 4;
+$menu-transition: .5s;
+$menu-bounce: cubic-bezier(.3, 1.4, .5, .9);
+$menu-color-inner: #00BCD4;
+$menu-color-outer: #E0F7FA;
+$menu-background: mix($menu-color-inner, $menu-color-outer);
+$menu-black: shade($menu-color-outer, 80%);
+$menu-start-scale: .5;
+$menu-start-rot: 190deg;
+
+nav.menu {
+	display: block;
+  position: fixed;
+  width: $menu-size * $menu-items * 2;
+  height: $menu-size * $menu-items * 2;
+  user-select: none;
+  transform: translate3d($menu-size * .5, -$menu-size * .5, 0);
+  transition: transform $menu-transition $menu-bounce;
+	
+	&.open {
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.top-right {
+		top: -$menu-size * ($menu-items - 2.2);
+    right: -$menu-size * ($menu-items - 2.2);
+	}
+}
+
+.disc { 
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font: $menu-size * .5 Alegreya Sans, sans-serif;
+  line-height: $menu-size * .8;
+  padding-top: $menu-size * .2;
+  border-radius: $menu-size * $menu-items;
+  transform: scale3d($menu-start-scale, $menu-start-scale, $menu-start-scale) rotate3d(0, 0, 1, $menu-start-rot);
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform $menu-transition $menu-bounce, opacity $menu-transition;
+	text-decoration: none;
+  color: #000;
+
+  div {
+    transform: rotate(180deg);
+  }
+  
+  .open & {
+    pointer-events: auto;
+    opacity: 1; 
+  }
+}
+
+@for $i from 1 through $menu-items {
+  .l#{$i} {
+    $i : $i - 1;
+    $-i : $menu-items - $i;
+    $pct : $i/$menu-items * 100%;
+    $color :  mix($menu-color-inner, $menu-color-outer, $pct);
+    
+    top: $i * $menu-size;
+    left: $i * $menu-size;
+    right: $i * $menu-size;
+    bottom: $i * $menu-size;
+    background: $color;
+    transition-delay: $i * $menu-transition / $menu-items;
+
+    .open & {
+      transition-delay: $i * $menu-transition / $menu-items;
+      transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, $menu-start-rot);
+      opacity: 1;
+      
+      &:hover {
+        background: shade($color, 90%);
+        color: $color;
+        transition-delay: 0s;
+      }
+
+      &:active {
+        background: shade($color, 50%);
+        color: $color;
+      }
+      
+      &.toggle {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, $menu-start-rot - 180deg);
+      }
+    }
+  }
+}
+
+.toggle {
+  line-height: $menu-size*2;
+  padding: 0;
+  width: $menu-size*2;
+  background: $menu-color-inner;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition-delay: 0s;
+  
+  .open & {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  &:hover {
+    background: shade($menu-color-inner, 90%);
+    color: $menu-color-inner;
+  }
+
+  &:active {
+    background: shade($menu-color-inner, 50%);
+    color: rgba($menu-color-inner, .5);
+    transform: scale(.9);
+    transition-duration: 0s;
+  }
+}

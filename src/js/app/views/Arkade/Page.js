@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from 'views/Home';
-import Games from 'views/Games';
-import About from 'views/About';
-import NotFound from 'views/NotFound';
+import Home from 'app/views/Home';
+import Games from 'app/views/Games';
+import About from 'app/views/About';
+import NotFound from 'app/views/NotFound';
 
 export default class Page extends Component {
   render() {

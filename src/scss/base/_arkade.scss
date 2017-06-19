@@ -1,2 +1,6 @@
 @import "../bootstrap/normalize";
 @import "../bootstrap/bootstrap";
+
+@import "menu";
+
+html, body { height: 100%; }
