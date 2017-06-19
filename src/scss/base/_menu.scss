@@ -1,5 +1,5 @@
 $menu-size: 50px;
-$menu-items: 4;
+$menu-items: 5;
 $menu-transition: .5s;
 $menu-bounce: cubic-bezier(.3, 1.4, .5, .9);
 $menu-color-inner: #00BCD4;
@@ -10,6 +10,7 @@ $menu-start-scale: .5;
 $menu-start-rot: 190deg;
 
 nav.menu {
+  z-index: 1;
 	display: block;
   position: fixed;
   width: $menu-size * $menu-items * 2;
@@ -44,6 +45,10 @@ nav.menu {
   transition: transform $menu-transition $menu-bounce, opacity $menu-transition;
 	text-decoration: none;
   color: #000;
+
+  &:hover {
+    color: #000;
+  }
 
   div {
     transform: rotate(180deg);
