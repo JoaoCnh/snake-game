@@ -144,7 +144,7 @@ module.exports = {
 	},
 	output: {
 		path: buildPath,
-		publicPath: '/',
+		publicPath: '',
 		filename: 'arkade-[hash].js',
 	},
 	module: {
