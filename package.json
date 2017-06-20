@@ -1,6 +1,6 @@
 {
   "name": "arkade",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A React web-app to showcase JS games",
   "main": "index.js",
   "scripts": {
