@@ -8,7 +8,8 @@
     "start": "node server",
     "dev": "webpack-dashboard -t \"Arkade\" -- webpack-dev-server",
     "build": "rm -rf ./build && NODE_ENV=\"production\" webpack",
-    "preview": "rm -rf ./build && NODE_ENV=\"production\" webpack-dashboard -t 'Preview - Arkade' -- webpack-dev-server"
+    "preview": "rm -rf ./build && NODE_ENV=\"production\" webpack-dashboard -t 'Preview - Arkade' -- webpack-dev-server",
+    "heroku-postbuild": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -56,11 +57,11 @@
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.6.1",
     "webpack-dashboard": "^0.4.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "webpack": "^2.6.1",
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^4.1.0",
     "express": "^4.15.3",
