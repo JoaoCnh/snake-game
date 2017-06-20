@@ -12,7 +12,7 @@ const version = require('./package.json').version;
 const isProduction = nodeEnv === 'production';
 
 const jsPath = path.join(__dirname, './src/js');
-const buildPath = path.join(__dirname, './docs');
+const buildPath = path.join(__dirname, './build');
 const imgPath = path.join(__dirname, './src/assets/img');
 const iconPath = path.join(__dirname, './src/assets/icons');
 const srcPath = path.join(__dirname, './src');
