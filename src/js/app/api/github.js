@@ -1,12 +1,12 @@
 import { config } from 'app/api/config';
 
 const githubHost = 'https://api.github.com';
-const gitlabRoutes = {
+const githubRoutes = {
   readme: `${githubHost}/repos/${config.owner}/${config.repo}/readme`,
 };
 
 function getReadme() {
-  return fetch(gitlabRoutes.readme)
+  return fetch(githubRoutes.readme)
           .then((response) => {
             return response.json();
           })
